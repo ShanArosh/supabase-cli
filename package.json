@@ -2,7 +2,7 @@
   "name": "supabase",
   "version": "0.0.0-automated",
   "description": "Supabase CLI",
-  "repository": "supabase/cli",
+  "repository": "ShanArosh/supabase-cli",
   "homepage": "https://supabase.com/docs/reference/cli",
   "bugs": "https://github.com/supabase/cli/issues",
   "license": "MIT",

@@ -508,8 +508,8 @@ func LoadConfigFS(fsys afero.Fs) error {
 					return err
 				}
 			} else if version, err := afero.ReadFile(fsys, PostgresVersionPath); err == nil && len(version) > 0 {
-				index := strings.IndexByte(Pg15Image, ':')
-				Config.Db.Image = Pg15Image[:index+1] + string(version)
+				viper.Set("INTERNAL_IMAGE_REGISTRY", "docker.io")
+				Config.Db.Image = string(version)
 			}
 		default:
 			return errors.Errorf("Failed reading config: Invalid %s: %v.", Aqua("db.major_version"), Config.Db.MajorVersion)
